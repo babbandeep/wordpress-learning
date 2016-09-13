@@ -70,3 +70,4 @@ class T5_Nav_Menu_Walker_Simple extends Walker_Nav_Menu
 		$output .= '</li>';
 	}
 }
+?>
