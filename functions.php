@@ -3,6 +3,8 @@
 require_once('inc/new_menu.php');
 require get_template_directory() . '/inc/customizer.php';
 include('inc/admin_menu.php');
+include('inc/custom_slider.php');
+
 
 if ( ! function_exists( 'learning_setup' ) ) :
 /**
@@ -67,15 +69,6 @@ function test_widgets_init() {
 }
 add_action( 'widgets_init', 'test_widgets_init' );
 
-
-function codex_custom_init() {
-    $args = array(
-      'public' => true,
-      'label'  => 'Slider Images'
-    );
-    register_post_type( 'slider', $args );
-}
-add_action( 'init', 'codex_custom_init' );
 
 
  ?>
