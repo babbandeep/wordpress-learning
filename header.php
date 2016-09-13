@@ -72,7 +72,7 @@
 												  'container_class' => 'visible-lg',
 												  'walker' => new T5_Nav_Menu_Walker_Simple()
 											)
-                    ); */?>
+                    ); */ ?>
 
                         </div>
                         <div class="col-md-4 no-padding">

@@ -1,1 +1,5 @@
-<?php include(header()); ?>
+<?php 
+
+get_header();
+
+?>

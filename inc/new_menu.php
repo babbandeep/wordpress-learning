@@ -16,14 +16,14 @@ class T5_Nav_Menu_Walker_Simple extends Walker_Nav_Menu
 	 * @param  array $args    Additional strings.
 	 * @return void
 	 */
-	public function start_el( &$output, $item, $depth, $args )
+	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 )
 	{
 		$output     .= '<li>';
 		$attributes  = '';
 		! empty ( $item->attr_title )
 			// Avoid redundant titles
 			and $item->attr_title !== $item->title
-			and $attributes .= ' class="' . esc_attr( $item->attr_title ) .'"';
+			and $attributes .= ' title="' . esc_attr( $item->attr_title ) .'"';
 		! empty ( $item->url )
 			and $attributes .= ' href="' . esc_attr( $item->url ) .'"';
 		$attributes  = trim( $attributes );
@@ -45,7 +45,7 @@ class T5_Nav_Menu_Walker_Simple extends Walker_Nav_Menu
 	 * @param string $output Passed by reference. Used to append additional content.
 	 * @return void
 	 */
-	public function start_lvl( &$output )
+	public function start_lvl( &$output, $depth = 0, $args = array() )
 	{
 		$output .= '<ul class="sub-menu">';
 	}
@@ -55,7 +55,7 @@ class T5_Nav_Menu_Walker_Simple extends Walker_Nav_Menu
 	 * @param string $output Passed by reference. Used to append additional content.
 	 * @return void
 	 */
-	public function end_lvl( &$output )
+	public function end_lvl( &$output, $depth = 0, $args = array() )
 	{
 		$output .= '</ul>';
 	}
@@ -65,9 +65,8 @@ class T5_Nav_Menu_Walker_Simple extends Walker_Nav_Menu
 	 * @param string $output Passed by reference. Used to append additional content.
 	 * @return void
 	 */
-	function end_el( &$output )
+	function end_el( &$output, $item, $depth = 0, $args = array() )
 	{
 		$output .= '</li>';
 	}
 }
-?>
