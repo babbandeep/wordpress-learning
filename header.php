@@ -64,7 +64,7 @@
                 <div class="container no-padding border-bottom">
                     <div class="row">
                         <div class="col-md-8 no-padding">
-						<?php /* wp_nav_menu( array(
+						<?php  wp_nav_menu( array(
 												  'theme_location' => 'header-menu',
 												  'menu_id' => 'hornavmenu',
 												  'menu_class' => 'nav navbar-nav',
@@ -72,7 +72,7 @@
 												  'container_class' => 'visible-lg',
 												  'walker' => new T5_Nav_Menu_Walker_Simple()
 											)
-                    ); */ ?>
+                    );  ?>
 
                         </div>
                         <div class="col-md-4 no-padding">

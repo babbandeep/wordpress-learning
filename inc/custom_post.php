@@ -4,7 +4,7 @@ function custom_testimonial(){
     
     register_post_type( 'testimonials',
                        array(
-                       'label' => array(
+                       'labels' => array(
                        'name' => __('Testimonials'),
                        'singular_name' => __('Testimonial')
                        ),
