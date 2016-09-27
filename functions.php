@@ -4,7 +4,7 @@ require_once('inc/new_menu.php');
 require get_template_directory() . '/inc/customizer.php';
 include('inc/admin_menu.php');
 include('inc/custom_slider.php');
-
+require_once('inc/custom_post.php');
 
 if ( ! function_exists( 'learning_setup' ) ) :
 /**
