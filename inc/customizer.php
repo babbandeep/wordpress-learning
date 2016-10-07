@@ -4,6 +4,7 @@
 
 function webbuilder_customize_register( $wp_customize ){
 
+// header phone_no, logo and email
 
 	$wp_customize->add_section( 'header' , array(
 		'title'    => __('Header', 'Webbuilder'),
@@ -21,11 +22,7 @@ function webbuilder_customize_register( $wp_customize ){
 		'priority' => 5,
     ) ) );
 
-/*	$wp_customize->add_section('header_settings_section', array(
-		'title'    => 'Header Text Section',
-		'priority' => 6
-	));
-*/
+
 	$wp_customize->add_setting('email', array(
 		'default'        => 'example@email.com',
 	));
@@ -48,6 +45,9 @@ function webbuilder_customize_register( $wp_customize ){
 		'type'    => 'text',
 	));
 
+
+//Social links
+
 	$wp_customize->add_section('social_links', array(
 	     'title'       =>  'Social links',
 		 'description' =>  'Use <b>https://</b> with links',
@@ -55,7 +55,7 @@ function webbuilder_customize_register( $wp_customize ){
 		 ));
 
 	$wp_customize->add_setting('fb_links', array(
-		'default' =>  'http://www.Facebook.com' 
+		'default' =>  'http://www.Facebook.com'
 		));
 
 	$wp_customize->add_control('fb_links', array(
@@ -83,6 +83,18 @@ function webbuilder_customize_register( $wp_customize ){
 		'section' =>  'social_links',
 		'type'    =>  'text'
 	));
+
+// HomePage widget section
+
+	$wp_customize->add_panel('home_page_panel', array(
+		'priority' 				=> 7,
+		'capability' 			=> 'edit_theme_options',
+		'theme_supports' 	=> '',
+		'title' 					=> esc_html__('Home Page Content','Webbuilder'),
+		'description' 		=> esc_html__('Edit Your Home Page Content', 'Webbuilder'),
+	));
+
+
 }
 
 add_action( 'customize_register','webbuilder_customize_register' );
