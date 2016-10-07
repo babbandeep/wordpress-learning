@@ -78,13 +78,13 @@
                         <div class="col-md-4 no-padding">
                             <ul class="social-icons pull-right">
                                 <li class="social-twitter">
-                                    <a href="<?php echo get_theme_mod('tw_links'); ?>" target="_blank" title="Twitter"></a>
+                                    <a href='<?php echo get_theme_mod( "tw_links" ); ?>' target="_blank" title="Twitter"></a>
                                 </li>
                                 <li class="social-facebook">
-                                    <a href="<?php echo get_theme_mod('fb_links'); ?>" target="_blank" title="Facebook"></a>
+                                    <a href='<?php echo get_theme_mod( "fb_links" ); ?>' target="_blank" title="Facebook"></a>
                                 </li>
                                 <li class="social-googleplus">
-                                    <a href="<?php echo get_theme_mod('gp_links'); ?>" target="_blank" title="Google+"></a>
+                                    <a href='<?php echo get_theme_mod( "gp_links" ); ?>' target="_blank" title="Google+"></a>
                                 </li>
                             </ul>
                         </div>
