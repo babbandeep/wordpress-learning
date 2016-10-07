@@ -84,17 +84,6 @@ function webbuilder_customize_register( $wp_customize ){
 		'type'    =>  'text'
 	));
 
-// HomePage widget section
-
-	$wp_customize->add_panel('home_page_panel', array(
-		'priority' 				=> 7,
-		'capability' 			=> 'edit_theme_options',
-		'theme_supports' 	=> '',
-		'title' 					=> esc_html__('Home Page Content','Webbuilder'),
-		'description' 		=> esc_html__('Edit Your Home Page Content', 'Webbuilder'),
-	));
-
-
 }
 
 add_action( 'customize_register','webbuilder_customize_register' );
