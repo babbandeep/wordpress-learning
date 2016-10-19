@@ -30,43 +30,26 @@ function register_my_menus() {
  add_action( 'init', 'register_my_menus' );
 
  ?>
- 
+
  <?php
 /**
  * Register our sidebars and widgetized areas.
  *
  */
 function test_widgets_init() {
-	
-	register_sidebar( array(
-	    'name'          => 'Header phone',
-		'id'            => 'header_phone',
-        'before_widget'	=> '',
-		'after_widget'  => '',
-		'before_title'  => '',
-		'before_title'  => ''
-		)
-	);
 
-	register_sidebar( array(
-		'name'          => 'Home slider',
-		'id'            => 'slider',
-		'before_widget' => '<div>',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="slider">',
-		'after_title'   => '</h2>',
-	) );
-	
+	for( $i=1; $i <= 4; $i++ ){
 		register_sidebar( array(
-		'name'          => 'Home right sidebar2',
-		'id'            => 'home_right_2',
-		'before_widget' => '<div>',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="rounded">',
-		'after_title'   => '</h2>',
-	) );
+			'name' 					=> 'footer '.$i,
+			'id'   					=> 'footer_area_'.$i,
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h4>',
+			'after_title'   => '</h4>',
+		));
+		}
 
-}
+	}
 add_action( 'widgets_init', 'test_widgets_init' );
 
 
