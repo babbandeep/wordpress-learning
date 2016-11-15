@@ -91,5 +91,6 @@
                     </div>
                 </div>
             </div>
+            <?php get_search_form(); ?>
             <!-- End Top Menu -->
             <!-- === END HEADER === -->

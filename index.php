@@ -13,6 +13,8 @@ if(get_post_meta(get_queried_object_id(), 'testing', true)){
 	echo get_post_meta(get_queried_object_id(), 'testing', true);
 }
 
+ echo get_post_meta( $post->ID, 'new', true);
+
 get_footer();
 
 ?>
