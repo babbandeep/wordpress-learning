@@ -56,4 +56,6 @@ function learning_enqueue_scripts(){
 	wp_enqueue_style( 'stylesheet', get_stylesheet_uri(), array(), date( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/style.css' ) ) );
 	}
 
+add_action( 'wp_enqueue_scripts', 'learning_enqueue_scripts');
+
  ?>
